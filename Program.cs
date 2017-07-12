@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace linq
 {
@@ -31,6 +33,57 @@ namespace linq
             var millionaires = from cust in customers
                 where cust.Balance >= 1000000
                 select cust;
+
+                // foreach (var cust in millionaires)
+                // {
+                //     Console.WriteLine($"{cust.Name} ${cust.Balance}");
+                // }
+
+                var grouped = from mill in millionaires 
+                    //below is the chose key we want to group by 
+                    // each item is grouped by bank, into taco ... taco below is the grouping operation. bank is the key in the instance below 
+                    // how many items are grouped using that key.
+                    group mill by mill.Bank into taco
+                    select new { Bank = taco.Key, Count = taco.Count() };
+
+                foreach (var taco in grouped){
+                        Console.WriteLine($"{taco.Bank} - {taco.Count}");
+
+                        foreach (var cust in taco.Count){
+                            Console.WriteLine($"  {cust.Name}");
+                        }
+                } 
+// the two below statments are exquivilent to each other .... 
+                //grouping customers
+                // var grouped = from cust in customers 
+    
+                //     group cust by cust.Bank into potato
+                //     select new { Bank = potato.Key, Count = potato.Count() };
+
+                var grouped2 = customers.Where(char2 => char2.Balance >= 1000000)
+                                        . GroupBy(d => d.Bank);
+// /...........................................................
+
+                foreach(var potato in grouped2){
+                    Console.WriteLine($"{potato.Key} {potato.Count()}");
+                    
+                    foreach(var customer in potato){
+                        Console.WriteLine($"{customer.Name} {customer.Balance}");
+                        }
+                }
+
+
+                // foreach (var potato in grouped){
+                //         Console.WriteLine($"{potato.Bank} - {potato.Count}");
+
+                //         foreach (var cust in potato.Customers){
+                //             Console.WriteLine($"  {cust.Name}");
+                //         }
+                // } 
+
+
+
+
             /* 
                 Given the same customer set, display how many millionaires per bank.
                 Ref: https://stackoverflow.com/questions/7325278/group-by-in-linq

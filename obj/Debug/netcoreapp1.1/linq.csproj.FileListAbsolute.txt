@@ -1,0 +1,4 @@
+/Users/kristincaron/workspace/serverSide/exercises/linq/bin/Debug/netcoreapp1.1/linq.deps.json
+/Users/kristincaron/workspace/serverSide/exercises/linq/bin/Debug/netcoreapp1.1/linq.runtimeconfig.json
+/Users/kristincaron/workspace/serverSide/exercises/linq/bin/Debug/netcoreapp1.1/linq.runtimeconfig.dev.json
+/Users/kristincaron/workspace/serverSide/exercises/linq/obj/Debug/netcoreapp1.1/linq.AssemblyInfo.cs
