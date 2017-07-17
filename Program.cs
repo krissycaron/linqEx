@@ -4,6 +4,7 @@ using System.Linq;
 
 namespace linq
 {
+
     // Build a collection of customers who are millionaires
     public class Customer
     {
@@ -15,6 +16,46 @@ namespace linq
     public class Program
     {
         public static void Main() {
+
+
+//...............................................................................................................................//
+// Start of step one //
+//...............................................................................................................................//
+            //Restriction/Filtering Operations
+            // Find the words in the collection that start with the letter 'L'
+                List<string> fruits = new List<string>() {"Lemon", "Apple", "Orange", "Lime", "Watermelon", "Loganberry"};
+                    
+                    IEnumerable<string> fruitsWithL =  from fruit in fruits 
+                        where fruit.StartsWith("L")
+                        select fruit;
+
+                        foreach(string fruit in fruitsWithL) 
+                        {
+                            Console.WriteLine(fruit);
+                        }
+                
+                // var LFruits = from fruit in fruits ...
+//...............................................................................................................................//
+// End Of step one //
+//...............................................................................................................................//
+
+
+//...............................................................................................................................//
+// Start Of step Two//
+//...............................................................................................................................//
+                // Which of the following numbers are multiples of 4 or 6
+                List<int> numbers = new List<int>()
+                {
+                    15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
+                }
+
+                var fourSixMultiples = numbers.Where();
+
+
+//...............................................................................................................................//
+// End Of step two //
+//...............................................................................................................................//
+
             List<Customer> customers = new List<Customer>() {
                 new Customer(){ Name="Bob Lesman", Balance=80345.66, Bank="FTB"},
                 new Customer(){ Name="Joe Landy", Balance=9284756.21, Bank="WF"},
@@ -46,13 +87,13 @@ namespace linq
                     group mill by mill.Bank into taco
                     select new { Bank = taco.Key, Count = taco.Count() };
 
-                foreach (var taco in grouped){
-                        Console.WriteLine($"{taco.Bank} - {taco.Count}");
+                // foreach (var taco in grouped){
+                //         Console.WriteLine($"{taco.Bank} - {taco.Count}");
 
-                        foreach (var cust in taco.Count){
-                            Console.WriteLine($"  {cust.Name}");
-                        }
-                } 
+                //         foreach (var cust in taco.Count){
+                //             Console.WriteLine($"  {cust.Name}");
+                //         }
+                // } 
 // the two below statments are exquivilent to each other .... 
                 //grouping customers
                 // var grouped = from cust in customers 

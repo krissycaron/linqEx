@@ -2,3 +2,7 @@
 /Users/kristincaron/workspace/serverSide/exercises/linq/bin/Debug/netcoreapp1.1/linq.runtimeconfig.json
 /Users/kristincaron/workspace/serverSide/exercises/linq/bin/Debug/netcoreapp1.1/linq.runtimeconfig.dev.json
 /Users/kristincaron/workspace/serverSide/exercises/linq/obj/Debug/netcoreapp1.1/linq.AssemblyInfo.cs
+/Users/kristincaron/workspace/serverSide/exercises/linq/bin/Debug/netcoreapp1.1/linq.dll
+/Users/kristincaron/workspace/serverSide/exercises/linq/bin/Debug/netcoreapp1.1/linq.pdb
+/Users/kristincaron/workspace/serverSide/exercises/linq/obj/Debug/netcoreapp1.1/linq.dll
+/Users/kristincaron/workspace/serverSide/exercises/linq/obj/Debug/netcoreapp1.1/linq.pdb
