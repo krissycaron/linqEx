@@ -48,8 +48,10 @@ namespace linq
                 {
                     15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
                 }
+               
+                var fourSixMultiples = numbers.Where(number => (number%4 == 0) || (number%6 == 0));
 
-                var fourSixMultiples = numbers.Where();
+                foreach
 
 
 //...............................................................................................................................//
